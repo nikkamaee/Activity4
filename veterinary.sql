@@ -9,6 +9,7 @@ CREATE TABLE owners(
 	email VARCHAR(100)
 );
 
+
 CREATE TABLE animals(
     animalid INT,
     name VARCHAR(50),
@@ -22,3 +23,11 @@ CREATE TABLE animals(
         FOREIGN KEY (ownerid) REFERENCES owners(ownerid)
 );
 
+CREATE TABLE appointments(
+    appointid INT,
+    animalid INT,
+    appointdate DATE,
+    reason VARCHAR(255),
+        PRIMARY KEY (appointid),
+        FOREIGN KEY (animalid) REFERENCES animals(animalid)
+);
