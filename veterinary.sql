@@ -163,3 +163,5 @@ WHERE dfirstname = 'Dr. Sofia';
 
 WHERE animalid=8;
 
+SELECT DISTINCT(species)
+FROM animals;
