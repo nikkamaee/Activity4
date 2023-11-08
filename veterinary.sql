@@ -151,3 +151,12 @@ ALTER TABLE invoices
 RENAME COLUMN paymentdate
 TO paymenttime;
 
+DELETE FROM invoices
+WHERE appointid=8;
+
+DELETE FROM appointments
+WHERE animalid=8;
+
+UPDATE doctors
+SET dlastname='Reyes-Gonzales'
+WHERE dfirstname = 'Dr. Sofia';
