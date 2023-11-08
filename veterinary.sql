@@ -155,12 +155,11 @@ DELETE FROM invoices
 WHERE appointid=8;
 
 DELETE FROM appointments
-<<<<<<< HEAD
 WHERE animalid=8;
 
 UPDATE doctors
 SET dlastname='Reyes-Gonzales'
 WHERE dfirstname = 'Dr. Sofia';
-=======
+
 WHERE animalid=8;
->>>>>>> 619b17e0d3b0411b2318a3f48c5a9a2a2b19a012
+
