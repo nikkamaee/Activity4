@@ -40,3 +40,23 @@ CREATE TABLE doctors(
     email VARCHAR(100),
         PRIMARY KEY (doctorid)
 );
+CREATE TABLE invoices(
+    invoiceid INT,
+    appointid INT,
+    totalamount NUMERIC(10, 2),
+    paymentdate TIME,
+        PRIMARY KEY (invoiceid),
+        FOREIGN KEY (appointid) REFERENCES appointments(appointid)
+);
+CREATE TABLE medicalrecords(
+    recordid INT, 
+    animalid INT,
+    recorddate TIMESTAMP,
+    doctorid INT,
+    diagnosis TEXT,
+    prescription TEXT,
+    notes TEXT,
+        PRIMARY KEY (recordid),
+        FOREIGN KEY (animalid) REFERENCES animals(animalid),
+        FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
+);
