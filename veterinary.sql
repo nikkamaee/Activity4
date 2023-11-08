@@ -180,3 +180,13 @@ ON appointments.animalid = animals.animalid
 WHERE owners.ofirstname = 'Maria'
 GROUP BY owners.ofirstname;
 
+
+SELECT 
+	animals.name,
+	COUNT(appointments.appointid)
+FROM animals
+INNER JOIN appointments
+ON appointments.animalid=animals.animalid
+GROUP BY animals.name
+ORDER BY COUNT(appointments.appointid) DESC
+LIMIT 1;
